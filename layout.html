@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template layout of webpage</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h2>Typical webpage layout</h2>
+<p>HTML has several semantic elements that define the different parts of a web page:</p>
+<h2>Layout elements</h2>
+</header>
+
+<section>
+  <nav>
+    <h1>Why CSS Framework?</h1>
+    <p>If you want to create your layout fast, you can use a CSS framework</p>
+    <img src="layout.gif" alt="layout table">
+    
+  </nav>
+  
+  <article>
+    
+        <ul>
+            <li>header - Defines a header for a document or a section</li>
+            <li>nav- Defines a set of navigation links</li>
+            <li>section- Defines a section in a document</li>
+            <li>article - Defines an independent, self-contained content</li>
+              <li>aside - Defines content aside from the content (like a sidebar)</li>
+              <li>footer - Defines a footer for a document or a section</li>
+              <li>details- Defines additional details that the user can open and close on demand</li>
+             <li>summary - Defines a heading for the details element</li>
+          </ul>
+  </article>
+</section>
+
+<footer>
+  <p>Thats all about the layout</p>
+</footer>

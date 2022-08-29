@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML CSS TUTORIAL</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color:dodgerblue;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color:yellow ;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: rgb(166, 167, 226);
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #aacfdd;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: rgb(55, 11, 212);
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h2>HTML CSS TUTORIAL WEBSITE</h2>
+
+</header>
+
+<section>
+  <nav>
+    <p>CLICK TO LEARN THE VARIOUS ASPECTS OF HTML AND CSS</p>
+    <a href="home.html" target="_blank">HTML BASICS</a></br>
+    <a href="gallery.html" target="_blank">Gallery</a></br>
+    <a href="css.html" target="_blank">CSS </a></br>
+    <a href="taglist.html" target="_blank">Most Popluar Tags</a></br>
+    <a href="bestpractice.html" target="_blank">Follow the best Practices</a></br>
+    <a href="layout.html" target="_blank">Typical HTML page layout</a></br>
+    <a href="contactus.html" target="_blank">Contact us for queries</a></br>
+
+    
+  </nav>
+  
+  <article>
+    <p>Welcome to this learning website</p>
+    <img src="htmlcssjs.jfif"  alt="baseimage" width="500" heigh="400">
+    
+        
+  </article>
+  <P>LEARN FACT : Its never too late to learn</P>
+</section>
+
+<footer>
+  <p>Thanks for visiting the website</p>
+</footer>
